@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr style="width:1100px;height:100px;">
+            <td style="width: 468px">
+                <img src="Images/EliteLogo.jpg"alt="No Image" 
+                    style="height: 140px; width: 285px; margin-top: 0px" />
+            </td>
+            <td style="font-size: xx-large; font-weight: 700; font-family: 'Arial Rounded MT Bold'; text-align: center;" 
+                class="style2">Welcome Admin!</td>
+            <td style="width:200px; text-align: center; font-size: large; font-family: 'Arial Rounded MT Bold';">
+               <asp:ImageButton ID="ImageButton4" 
+                    runat="server" Height="55px" 
+                    ImageUrl="~/Images/learnLogout.jpg" Width="57px" 
+                    onclick="ImageButton4_Click" style="text-align: right"/> <br /> Logout</td>
+        </tr>
+         <tr style="width:1100px;height:70px;background-color:Orange">
+            <td colspan="3" bgcolor="#CC0000">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                    
+                    style="text-align: left; font-family: 'Arial Rounded MT Bold'; font-size: large;" 
+                    ForeColor="Black" Font-Size="Medium">
+                    <Items>
+                        <asp:MenuItem Text="Home |" Value="Home |" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Marks |" Value="Marks |" NavigateUrl="~/About.aspx">
+                            <asp:MenuItem Text="View Outstanding Marks" Value="View Outstanding Marks">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="View All Marks" Value="Capture Marks"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Composites |" Value="Composites |" 
+                            NavigateUrl="~/ServicesOffered.aspx">
+                            <asp:MenuItem Text="Learner Composites" Value="Learner Composites">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Class Composites" Value="Class Composites"></asp:MenuItem>
+                            <asp:MenuItem Text="Fees Owing" Value="Fees Owing"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Learners |" Value="Learners |">
+                            <asp:MenuItem Text="View Learners" Value="View Learners"></asp:MenuItem>
+                            <asp:MenuItem Text="Edit Learners" Value="Edit Learners"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Assessments |" Value="Assessments |">
+                            <asp:MenuItem Text="View POAs" Value="View POAs"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <LevelSubMenuStyles>
+                        <asp:SubMenuStyle BackColor="#33CC33" Font-Underline="False" />
+                        <asp:SubMenuStyle BackColor="#33CC33" Font-Underline="False" />
+                    </LevelSubMenuStyles>
+                    <StaticHoverStyle BackColor="Black" ForeColor="White" />
+                    <StaticMenuItemStyle BackColor="#CC0000" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr style="width:1100px;height:100px;">
+            <td>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

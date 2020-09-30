@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="OwnerMaster.master.cs" Inherits="OwnerMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1117px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width:1100px; margin: 0 auto">
+        <tr style="width:1100px;height:100px;">
+            <td class="style1">
+                <img src="Images/EliteLogo.jpg"alt="No Image" 
+                    style="height: 140px; width: 285px; margin-top: 0px" />
+            </td>
+            <td style="font-size: xx-large; font-weight: 700; font-family: 'Arial Rounded MT Bold'; " 
+                class="style2">Welcome Student!</td>
+            <td style="width:200px; text-align: center; font-size: large; font-family: 'Arial Rounded MT Bold'; color: #000066;">
+               <asp:ImageButton ID="ImageButton1" runat="server" Height="55px" 
+                    ImageUrl="~/Images/learnLogout.jpg" Width="57px" 
+                    onclick="ImageButton4_Click" style="text-align: right"/> <br /> Logout</td>
+        </tr>
+        <tr style="width:1100px;height:70px">
+            <td colspan="3"style="color: #6600CC; font-size: large; text-align: right;" 
+                bgcolor="#99CCFF">
+            `<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                    
+                    style="text-align: left; font-family: 'Arial Rounded MT Bold'; font-size: large;" 
+                    ForeColor="#000066" Font-Size="X-Large">
+                    <Items>
+                        <asp:MenuItem Text="Home |" Value=" Home" NavigateUrl="~/learnHome.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text=" Timetable |" Value="Timetable" 
+                            NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text=" Statements |" Value="Statements" 
+                            NavigateUrl="~/ServicesOffered.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text=" Assessments  |" Value="Assessments" 
+                            NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text=" Marks" Value="Marks"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#000066" ForeColor="White" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr style="width:1100px;height:100px;">
+            <td colspan="3">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
